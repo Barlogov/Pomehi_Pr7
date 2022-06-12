@@ -1,0 +1,15 @@
+D:\Programs\JetBrains\JetBrains Rider 2021.3.3\Projects\Pomekhoustoychivost\Pomekhoustoychivost\bin\Debug\net6.0\Pomekhoustoychivost.exe
+D:\Programs\JetBrains\JetBrains Rider 2021.3.3\Projects\Pomekhoustoychivost\Pomekhoustoychivost\bin\Debug\net6.0\Pomekhoustoychivost.deps.json
+D:\Programs\JetBrains\JetBrains Rider 2021.3.3\Projects\Pomekhoustoychivost\Pomekhoustoychivost\bin\Debug\net6.0\Pomekhoustoychivost.runtimeconfig.json
+D:\Programs\JetBrains\JetBrains Rider 2021.3.3\Projects\Pomekhoustoychivost\Pomekhoustoychivost\bin\Debug\net6.0\Pomekhoustoychivost.dll
+D:\Programs\JetBrains\JetBrains Rider 2021.3.3\Projects\Pomekhoustoychivost\Pomekhoustoychivost\bin\Debug\net6.0\Pomekhoustoychivost.pdb
+D:\Programs\JetBrains\JetBrains Rider 2021.3.3\Projects\Pomekhoustoychivost\Pomekhoustoychivost\obj\Debug\net6.0\Pomekhoustoychivost.csproj.AssemblyReference.cache
+D:\Programs\JetBrains\JetBrains Rider 2021.3.3\Projects\Pomekhoustoychivost\Pomekhoustoychivost\obj\Debug\net6.0\Pomekhoustoychivost.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programs\JetBrains\JetBrains Rider 2021.3.3\Projects\Pomekhoustoychivost\Pomekhoustoychivost\obj\Debug\net6.0\Pomekhoustoychivost.AssemblyInfoInputs.cache
+D:\Programs\JetBrains\JetBrains Rider 2021.3.3\Projects\Pomekhoustoychivost\Pomekhoustoychivost\obj\Debug\net6.0\Pomekhoustoychivost.AssemblyInfo.cs
+D:\Programs\JetBrains\JetBrains Rider 2021.3.3\Projects\Pomekhoustoychivost\Pomekhoustoychivost\obj\Debug\net6.0\Pomekhoustoychivost.csproj.CoreCompileInputs.cache
+D:\Programs\JetBrains\JetBrains Rider 2021.3.3\Projects\Pomekhoustoychivost\Pomekhoustoychivost\obj\Debug\net6.0\Pomekhoustoychivost.dll
+D:\Programs\JetBrains\JetBrains Rider 2021.3.3\Projects\Pomekhoustoychivost\Pomekhoustoychivost\obj\Debug\net6.0\refint\Pomekhoustoychivost.dll
+D:\Programs\JetBrains\JetBrains Rider 2021.3.3\Projects\Pomekhoustoychivost\Pomekhoustoychivost\obj\Debug\net6.0\Pomekhoustoychivost.pdb
+D:\Programs\JetBrains\JetBrains Rider 2021.3.3\Projects\Pomekhoustoychivost\Pomekhoustoychivost\obj\Debug\net6.0\Pomekhoustoychivost.genruntimeconfig.cache
+D:\Programs\JetBrains\JetBrains Rider 2021.3.3\Projects\Pomekhoustoychivost\Pomekhoustoychivost\obj\Debug\net6.0\ref\Pomekhoustoychivost.dll
