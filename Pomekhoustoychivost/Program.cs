@@ -1,24 +1,6 @@
 ﻿class Pomekhoustoychivost
 {
     static int[] _e = new []{1,2,4,8,3,6,12,11,5,10,7,14,15,13,9, 0};
-// Test    
-    // static int[,] _delimoe = new int[,]
-    // {
-    //     // Ex^14 -> Ex^6
-    //     // E^
-    //     {6, 3, 6, 0, 0, 0, 5, 4, 9},
-    //     // x^
-    //     {14, 13, 12, 11, 10, 9, 8, 7, 6}
-    // };
-    //     
-    // static int[,] _delitel = new int[,]
-    // {
-    //     // Ex^6 -> Ex^0
-    //     // E^
-    //     {0, 10, 14, 4, 6, 9, 6},
-    //     // x^
-    //     {6, 5, 4, 3, 2, 1, 0}
-    // };
 // My var from pr 6
     // static int[,] _delimoe = new int[,]
     // {
@@ -43,21 +25,172 @@
     {
         // Ex^14 -> Ex^6
         // E^
-        {14, 13, 13, 2, 13, 12, 13, 6, 13},
+        {11, 3, 2, 5, 13, 11, 2, 3, 0},
         // x^
-        {14, 13, 12, 11, 10, 9, 8, 7, 6}
+        {8, 7, 6, 5, 4, 3, 2, 1, 0}
     };
         
     static int[,] _delitel = new int[,]
     {
         // Ex^6 -> Ex^0
         // E^
-        {0, 10, 14, 4, 6, 9, 6},
+        {0, 15, 15, 15, 15, 15, 15, 15},
         // x^
-        {6, 5, 4, 3, 2, 1, 0}
+        {7, 6, 5, 4, 3, 2, 1, 0}
     };
     
-    static void Main()
+    
+    
+    public static void Main()
+    {
+        Pomekhoustoychivost main = new Pomekhoustoychivost();
+        //main.VizovDeleniya(); // Вызов деления _delimoe на _delitel
+        //main.VizovRasshetaS(); // Вызов расчета S
+
+        // while (true)
+        // {
+        //     main.SumEFromKB(); // Сложение E
+        // }
+        
+        //main.VivodAlChenya(); // Вывод алгоритма Ченя
+        
+        
+        Console.ReadKey();
+        Console.ReadKey();
+        Console.ReadKey();
+        
+    }
+
+    public void VivodAlChenya()
+    {
+        //Для алгоритма ченя 
+        int[,] r_x = new int[,]
+        {
+            // E^
+            {0, 8, 8},
+            // x^
+            {0, 1, 2}
+        };
+        // Проверка других значений
+        // for (int j = 0; j <= 14; j++)
+        // {
+        //     Console.WriteLine("-------------------");
+        //     r_x[0, 1] = j;
+        //     r_x[0, 2] = j;
+        //     for (int i = 0; i <= 14; i++)
+        //     {
+        //         AlChenya(r_x, i);
+        //     }
+        // }
+        for (int i = 0; i <= 14; i++)
+        {
+            AlChenya(r_x, i);
+        }
+
+    }
+
+    public void AlChenya(int[,] r_x, int iteracia)
+    {
+        Console.Write($"G(E^{iteracia}) = "); // ал. Ченя
+
+        int sum = 0;
+        for (int i = 0; i < r_x.GetLength(1); i++)
+        {
+            sum ^= _e[(r_x[0, i] + r_x[1,i]*iteracia)%15];
+            Console.Write("E^{0,2} + ", ((r_x[0, i] + r_x[1,i]*iteracia)%15).ToString());
+        }
+        Console.WriteLine($" = E^{NumberE(sum)}");
+        
+        
+    }
+
+    public void VizovRasshetaS()
+    {
+        //Для поиска S
+        int[,] r_x = new int[,]
+        {
+            // E^
+            {5,14,9,8,4,11,13,6,13,12,14, 2,13,13,14},
+            // x^
+            {0, 1,2,3,4, 5, 6,7, 8, 9,10,11,12,13,14}
+        };
+        
+        for (int i = 1; i <= 6; i++)
+        {
+            RasshetS(i,r_x);
+        }
+        
+    }
+
+    public void SumEFromKB()
+    {
+        int[] slag = new int[2];
+        int sum=0;
+        for (int i = 0; i < slag.Length; i++)
+        {
+            slag[i] = int.Parse(Console.ReadLine());
+            sum ^= _e[slag[i]];
+        }
+        Console.WriteLine($"= {NumberE(sum)}");
+        Console.WriteLine("--------");
+    }
+
+    public int RasshetS(int stepen, int[,] r_x)
+    {
+        // ------------------- Вывод на экран -------------------
+        Console.WriteLine($"S{stepen} = r(E^{stepen}) = "); // S
+
+        for (int i = 0; i < r_x.GetLength(1); i++)
+        {
+            Console.Write("E^{0,2} x^{1,2}", r_x[0,i].ToString(), r_x[1,i].ToString());
+            if (i < r_x.GetLength(1) - 1)
+            {
+                Console.Write(" + ");
+            }
+        }
+        Console.Write(" = ");
+        // !------------------- Вывод на экран -------------------!
+        
+        int[] stepenE = new int[r_x.GetLength(1)];
+        for (int i = 0; i < r_x.GetLength(1); i++)
+        {
+            if (r_x[0, i]==15)
+            {
+                stepenE[i] = 15;
+            }
+            else
+            {
+                stepenE[i] = (r_x[0, i] + r_x[1, i] * stepen) % 15;
+            }
+            
+        }
+        
+        // ------------------- Вывод на экран -------------------
+        Console.WriteLine();
+        for (int i = 0; i < r_x.GetLength(1); i++)
+        {
+            Console.Write("E^{0,2}",  stepenE[i].ToString());
+            if (i < r_x.GetLength(1) - 1)
+            {
+                Console.Write(" + ");
+            }
+        }
+        Console.Write(" = ");
+        // !------------------- Вывод на экран -------------------!
+
+        int sum = _e[stepenE[0]];
+        for (int i = 1; i < stepenE.Length; i++)
+        {
+            sum ^= _e[stepenE[i]];
+        }
+        
+        // ------------------- Вывод на экран -------------------
+        Console.WriteLine($" [ E^{NumberE(sum)} ]");
+        // !------------------- Вывод на экран -------------------!
+        return NumberE(sum);
+    }
+
+    public void VizovDeleniya()
     {
         // int [0, E]
         // int [1, X]
@@ -112,12 +245,8 @@
                 Console.Write(" + ");
             }
         }
-        
-        Console.ReadKey();
-        Console.ReadKey();
-        Console.ReadKey();
-        
     }
+    
     public static int[,] DivEMnogochlen(int[,] delimoe, int[,] delitel, int[,] otvet, int iteration, ref int[,] ostatocOtDelenia)
         {
             int[,] promejutoc = new int[2, delitel.GetLength(1)];
